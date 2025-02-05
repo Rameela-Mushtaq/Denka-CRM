@@ -7,7 +7,7 @@ const MobileBar = () => {
     const [active] = useState("Dashboard");
     return (
         <div onClick={(e) => e.stopPropagation()}
-            className='fixed max-h-screen overflow-auto custom-scrollbar  inset-0 z-50 transition-transform transform translate-x-0 md:static md:translate-x-0 xl:w-[16%] lg:w-[23%] md:w-[26%] w-[70%]'>
+            className='fixed max-h-screen overflow-auto custom-scrollbar  inset-0 z-50 transition-transform bg-white transform translate-x-0 md:static md:translate-x-0 xl:w-[16%] lg:w-[23%] md:w-[26%] w-[70%]'>
             <div className='w-full h-full flex-grow pb-1 md:z-40 z-50 flex justify-between items-center flex-col pt-4 bg-white font-manrope'>
                 <div className='flex flex-col items-start gap-2 w-[90%]'>
                     {/* logo */}
