@@ -3,7 +3,7 @@ import { CardData } from '../../data/data';
 
 const Card = () => {
   return (
-    <div className='grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 font-manrope'>
+    <div className='grid xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2  grid-cols-1 gap-4 font-manrope'>
       {CardData.map((item, index) => (
         <div key={index} className='border flex flex-col gap-5 border-border px-3 pt-5 pb-6 rounded-lg'>
           <div className='flex justify-between items-center'>
