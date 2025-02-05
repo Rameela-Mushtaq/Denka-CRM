@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Custom Scrollbar */
+.custom-scrollbar {
+    overflow: auto; /* Show scrollbar only when necessary */
+    scrollbar-width: thin; 
+    scrollbar-color: #777777 #e0e0e0; /* Thumb and track color for Firefox */
+  }
+  
+  /* Webkit Browsers */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 5px; /* Set width of the scrollbar */
+    height: 5px; /* For horizontal scrollbar */
+  }
+  
+  
+  
+  
