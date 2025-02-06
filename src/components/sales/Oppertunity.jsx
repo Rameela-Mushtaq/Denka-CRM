@@ -21,7 +21,7 @@ const Oppertunity = () => {
         {filteredCards.map((card, index) => (
           <div
             key={index}
-            className='border border-border rounded-lg truncate px-4 pt-3 md:pb-8 pb-4 flex flex-col gap-3'
+            className='border border-border rounded-lg  px-4 pt-3 md:pb-8 pb-4 flex flex-col gap-3'
           >
             <div className="flex items-center gap-1.5">
               <div className={`w-8 h-8 flex items-center justify-center rounded-md text-white font-medium ${card.avatarColor}`}>J</div>
