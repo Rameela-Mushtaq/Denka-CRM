@@ -62,9 +62,9 @@ const MobileBar = () => {
                  
                 >
                 <div>
-                  <img src={item.icon} alt="icon" />
+                  <img src={item.icon} alt="icon" className=''/>
                 </div>
-                <div className='flex items-center py-2 w-full font-medium text-secondary'>
+                <div className='flex items-center py-2 w-full font-medium  md:text-base text-sm text-secondary'>
                   {item.name}
                 </div>
               </div>

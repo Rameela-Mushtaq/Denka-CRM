@@ -62,7 +62,7 @@ const Sidebar = () => {
                 <div>
                   <img src={item.icon} alt="icon" />
                 </div>
-                <div className='flex items-center py-2 w-full font-medium text-secondary'>
+                <div className='flex items-center py-2 w-full md:text-base text-sm font-medium text-secondary'>
                   {item.name}
                 </div>
               </div>
