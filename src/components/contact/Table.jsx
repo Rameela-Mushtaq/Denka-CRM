@@ -73,7 +73,7 @@ const Table = () => {
                         </button>
                     </div>
 
-                    <div className="flex gap-3">
+                    <div className="flex flex-wrap gap-3">
                         <div className="flex gap-3">
                         {(filterStatus || sortOrder) && (
                             <button
@@ -93,7 +93,7 @@ const Table = () => {
 
                         <button 
                         onClick={() => setIsSalesOpen(true)}
-                        className="text-white bg-btnBg p-3 w-fit whitespace-nowrap font-medium rounded-lg lg:flex hidden">
+                        className="text-white p-2 md:text-base text-sm bg-btnBg md:p-3 w-fit whitespace-nowrap font-medium rounded-lg">
                             + Add Sales Record
                         </button>
                     </div>

@@ -19,7 +19,7 @@ const Lead = () => {
 
                     <button 
                         onClick={() => setIsLeadOpen(true)}
-                        className="text-white bg-btnBg p-3 w-fit whitespace-nowrap font-medium rounded-lg ">
+                        className="text-white p-2 md:text-base text-sm bg-btnBg md:p-3 w-fit whitespace-nowrap font-medium rounded-lg ">
                             + Add Sales Record
                         </button>
                 </div>
