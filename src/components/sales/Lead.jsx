@@ -6,6 +6,14 @@ import AddLead from './AddLead';
 
 const Lead = () => {
   const [isLeadOpen, setIsLeadOpen] = useState(false)
+  const [searchTerm, setSearchTerm] = useState('');
+
+  // Step 2: Filter data based on search term
+     const filteredData = LeadData.filter((item) =>
+      item.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.company.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      item.status.toLowerCase().includes(searchTerm.toLowerCase()) 
+   );
 
   return (
     <div className="py-2 font-manrope">
@@ -14,7 +22,13 @@ const Lead = () => {
                 <div className="flex justify-between flex-wrap  gap-4 items-center py-3.5 px-4 border-b border-border">
                     <div className="text-other font-medium flex gap-2 items-center md:pl-10">
                        <FiSearch className='text-2xl'/>
-                        <input type="text" placeholder='Search Here' className='outline-none'/>
+                        <input 
+                        type="text" 
+                        placeholder='Search Here' 
+                        className='outline-none'
+                        value={searchTerm} 
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                        />
                     </div>
 
                     <button 
@@ -39,7 +53,7 @@ const Lead = () => {
                         </thead>
 
                         <tbody>
-                            {LeadData.map((item, index) => (
+                            {filteredData.map((item, index) => (
                                 <tr key={index} className="border-t border-border">
                                     <td className="py-5 px-4 truncate">
                                         <div to='/profile' className="flex gap-3.5">
