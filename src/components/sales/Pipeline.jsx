@@ -62,7 +62,7 @@ const Pipeline = () => {
   };
 
   return (
-    <div className='flex flex-col  gap-6'>
+    <div className='flex flex-col gap-6 border border-border rounded-lg p-4'>
       <div className="flex justify-center">
       {stripePattern && <Bar data={data} options={options} />}  {/* Render chart only when pattern is ready */}
     </div>
