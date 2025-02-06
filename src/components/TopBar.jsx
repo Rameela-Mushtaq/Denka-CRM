@@ -4,10 +4,16 @@ import profile from '../assets/images/profile.png'
 import { BsChevronDown } from "react-icons/bs";
 import { RiMenu3Fill } from "react-icons/ri";
 import MobileBar from './MobileBar'
+import { PageTitles } from '../data/data';
+import { useLocation } from 'react-router-dom';
 
-const TopBar = () => {
+
+const TopBar = ({ onAddBlogClick }) => {
   const [isMobileNavOpen, setIsMobileNavOpen] = useState(false); // State to control the mobile nav
-
+  const location = useLocation();  // Get the current path
+  const currentTitle = PageTitles[location.pathname] || 'Dashboard';
+  
+  
   // Toggle the mobile nav visibility
   const toggleMobileNav = () => {
     setIsMobileNavOpen(!isMobileNavOpen);
@@ -19,16 +25,21 @@ const TopBar = () => {
 
 
   return (
-    <div className='sticky z-50  top-0 font-manrope bg-white'>
+    <div className='sticky z-40  top-0 font-manrope bg-white'>
       <div className='w-full flex justify-between items-center border-b border-border px-4 p-3.5'>
         <div className='text-primary font-bold md:text-2xl text-lg md:flex hidden'>
-          Dashboard
+          {currentTitle}
         </div>
 
         <div className='md:flex hidden  gap-4 items-center'>
-          <button className='text-white bg-btnBg p-3 w-fit whitespace-nowrap font-medium rounded-lg mr-2 lg:flex hidden'>
-            + Add Blog
-          </button>
+          {location.pathname === '/' && (
+            <button
+              className='text-white bg-btnBg p-3 w-fit whitespace-nowrap font-medium rounded-lg mr-2 lg:flex hidden'
+              onClick={onAddBlogClick}
+            >
+              + Add Blog
+            </button>
+          )}
           <div className='bg-[#F4F4F4] p-2 rounded-md'>
             <img src={bell} alt="" />
           </div>
@@ -73,6 +84,7 @@ const TopBar = () => {
           <MobileBar />
         </div>
       )}
+
     </div>
   )
 }
