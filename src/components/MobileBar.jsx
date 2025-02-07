@@ -55,7 +55,7 @@ const MobileBar = () => {
                 </div>
               )}
 
-              <div className={`flex gap-2 px-2.5 items-center whitespace-nowrap cursor-pointer my-2 text-secondary rounded-lg transition cursor-pointer ${active === item.id ? "bg-[#F0EDFF] border border-[#8A73E8] rounded-lg py-1" : ""
+              <div className={`flex gap-2 px-2.5 items-center whitespace-nowrap cursor-pointer my-2 text-secondary rounded-lg transition ${active === item.id ? "bg-[#F0EDFF] border border-[#8A73E8] rounded-lg py-1" : ""
                 }
                 
                 ` }

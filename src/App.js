@@ -5,6 +5,7 @@ import Dashboard from "./pages/Dashboard";
 import Contact from "./pages/Contact";
 import Profile from "./components/contact/Profile";
 import Sales from "./pages/Sales";
+import Activity from "./pages/Activity";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
            <Route  path="/contact" element={<Contact />}/>
            <Route  path="/profile" element={<Profile />}/>
            <Route  path="/sales" element={<Sales />}/>
+           <Route  path="/activity" element={<Activity />}/>
         </Route>
       </Routes>
     </Router>

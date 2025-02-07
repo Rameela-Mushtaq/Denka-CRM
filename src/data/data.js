@@ -2,6 +2,10 @@ import Invoice from "../components/sales/Invoice";
 import Lead from "../components/sales/Lead";
 import Oppertunity from "../components/sales/Oppertunity";
 import Pipeline from "../components/sales/Pipeline";
+import Task from "../components/activity/Task.jsx";
+import Reminder from "../components/activity/Reminder.jsx";
+import BoradView from "../components/activity/BoradView.jsx";
+import CalenderView from "../components/activity/CalenderView.jsx";
 
 export const SideBarLinks = [
   {
@@ -27,7 +31,7 @@ export const SideBarLinks = [
     id: 4,
     name: "Activity Management",
     icon: require("../assets/images/activity.png"),
-    //path: "/activity",
+    path: "/activity",
   },
   {
     id: 5,
@@ -362,9 +366,7 @@ export const LeadData = [
 ];
 
 export const Statuses = [
-  { label: "New", 
-    bgColor: "bg-[#ECF2EA]", 
-    textColor: "text-[#4BB817]" },
+  { label: "New", bgColor: "bg-[#ECF2EA]", textColor: "text-[#4BB817]" },
   {
     label: "In Progress",
     bgColor: "bg-[#DFF0FA]",
@@ -380,10 +382,7 @@ export const Statuses = [
     bgColor: "bg-[#FFBA861F]",
     textColor: "text-[#B55D1B]",
   },
-  { label: "Closed", 
-    bgColor: "bg-[#F8E7E7]", 
-    textColor: "text-[#CD1A1A]" 
-  },
+  { label: "Closed", bgColor: "bg-[#F8E7E7]", textColor: "text-[#CD1A1A]" },
 ];
 
 export const OppertunityData = [
@@ -750,84 +749,512 @@ export const OppertunityData = [
 
 export const InvoiceData = [
   {
-    invoice: 'Q-87786',
-    name: 'James Williams',   
+    invoice: "Q-87786",
+    name: "James Williams",
     icon: require("../assets/icons/user1.png"),
-    amount: '$12000',
-    status: 'Send',
-    date: '01/03/2024',
-    dueDate: '01/12/2025',
+    amount: "$12000",
+    status: "Send",
+    date: "01/03/2024",
+    dueDate: "01/12/2025",
   },
   {
-    invoice: 'Q-87786',
-    name: 'James Williams',   
+    invoice: "Q-87786",
+    name: "James Williams",
     icon: require("../assets/icons/user2.png"),
-    amount: '$12000',
-    status: 'Send',
-    date: '01/03/2024',
-    dueDate: '01/12/2025',
+    amount: "$12000",
+    status: "Send",
+    date: "01/03/2024",
+    dueDate: "01/12/2025",
   },
   {
-    invoice: 'Q-87786',
-    name: 'James Williams',   
+    invoice: "Q-87786",
+    name: "James Williams",
     icon: require("../assets/icons/user3.png"),
-    amount: '$12000',
-    status: 'Paid',
-    date: '01/03/2024',
-    dueDate: '01/12/2025',
+    amount: "$12000",
+    status: "Paid",
+    date: "01/03/2024",
+    dueDate: "01/12/2025",
   },
   {
-    invoice: 'Q-87786',
-    name: 'James Williams',   
+    invoice: "Q-87786",
+    name: "James Williams",
     icon: require("../assets/icons/user4.png"),
-    amount: '$12000',
-    status: 'Send',
-    date: '01/03/2024',
-    dueDate: '01/12/2025',
+    amount: "$12000",
+    status: "Send",
+    date: "01/03/2024",
+    dueDate: "01/12/2025",
   },
   {
-    invoice: 'Q-87786',
-    name: 'James Williams',   
+    invoice: "Q-87786",
+    name: "James Williams",
     icon: require("../assets/icons/user5.png"),
-    amount: '$12000',
-    status: 'Send',
-    date: '01/03/2024',
-    dueDate: '01/12/2025',
+    amount: "$12000",
+    status: "Send",
+    date: "01/03/2024",
+    dueDate: "01/12/2025",
   },
   {
-    invoice: 'Q-87786',
-    name: 'James Williams',   
+    invoice: "Q-87786",
+    name: "James Williams",
     icon: require("../assets/icons/user6.png"),
-    amount: '$12000',
-    status: 'Paid',
-    date: '01/03/2024',
-    dueDate: '01/12/2025',
+    amount: "$12000",
+    status: "Paid",
+    date: "01/03/2024",
+    dueDate: "01/12/2025",
   },
   {
-    invoice: 'Q-87786',
-    name: 'James Williams',   
+    invoice: "Q-87786",
+    name: "James Williams",
     icon: require("../assets/icons/user7.png"),
-    amount: '$12000',
-    status: 'Send',
-    date: '01/03/2024',
-    dueDate: '01/12/2025',
+    amount: "$12000",
+    status: "Send",
+    date: "01/03/2024",
+    dueDate: "01/12/2025",
   },
   {
-    invoice: 'Q-87786',
-    name: 'James Williams',   
+    invoice: "Q-87786",
+    name: "James Williams",
     icon: require("../assets/icons/user8.png"),
-    amount: '$12000',
-    status: 'Send',
-    date: '01/03/2024',
-    dueDate: '01/12/2025',
+    amount: "$12000",
+    status: "Send",
+    date: "01/03/2024",
+    dueDate: "01/12/2025",
   },
   {
-    invoice: 'Q-87786',
-    name: 'James Williams',   
+    invoice: "Q-87786",
+    name: "James Williams",
     icon: require("../assets/icons/user1.png"),
-    amount: '$12000',
-    status: 'Paid',
-    date: '01/03/2024',
-    dueDate: '01/12/2025',
+    amount: "$12000",
+    status: "Paid",
+    date: "01/03/2024",
+    dueDate: "01/12/2025",
   },
-]
+];
+
+export const ActivityData = [
+  {
+    task: "Sales Marketing Strategy",
+    name: "James Williams",
+    icon: require("../assets/icons/user1.png"),
+    date: "09/05/2025",
+    status: "Pending",
+  },
+  {
+    task: "Sales Marketing Strategy",
+    name: "James Williams",
+    icon: require("../assets/icons/user1.png"),
+    date: "09/05/2025",
+    status: "Pending",
+  },
+  {
+    task: "Sales Marketing Strategy",
+    name: "James Williams",
+    icon: require("../assets/icons/user1.png"),
+    date: "09/05/2025",
+    status: "Completed",
+  },
+  {
+    task: "Sales Marketing Strategy",
+    name: "James Williams",
+    icon: require("../assets/icons/user1.png"),
+    date: "09/05/2025",
+    status: "Pending",
+  },
+  {
+    task: "Sales Marketing Strategy",
+    name: "James Williams",
+    icon: require("../assets/icons/user1.png"),
+    date: "09/05/2025",
+    status: "Pending",
+  },
+  {
+    task: "Sales Marketing Strategy",
+    name: "James Williams",
+    icon: require("../assets/icons/user1.png"),
+    date: "09/05/2025",
+    status: "Completed",
+  },
+  {
+    task: "Sales Marketing Strategy",
+    name: "James Williams",
+    icon: require("../assets/icons/user1.png"),
+    date: "09/05/2025",
+    status: "Pending",
+  },
+  {
+    task: "Sales Marketing Strategy",
+    name: "James Williams",
+    icon: require("../assets/icons/user1.png"),
+    date: "09/05/2025",
+    status: "Pending",
+  },
+  {
+    task: "Sales Marketing Strategy",
+    name: "James Williams",
+    icon: require("../assets/icons/user1.png"),
+    date: "09/05/2025",
+    status: "Completed",
+  },
+];
+
+export const ActivityTabData = [
+  {
+    title: "Task Management",
+    content: <Task />,
+  },
+  {
+    title: "Reminders",
+    content: <Reminder />,
+  },
+];
+
+export const ReminderTabData = [
+  {
+    icon: require("../assets/images/board.png"),
+    title: "Board View",
+    content: <BoradView />,
+  },
+  {
+    icon: require("../assets/images/chat.png"),
+    title: "Calender View",
+    content: <CalenderView />,
+  },
+];
+
+export const BoardData = [
+  {
+    id: 1,
+    date: "20 July",
+    day: "Thu",
+    time: "12:00 pm",
+    title: "Increase Lead Generation",
+    members: [
+      require("../assets/icons/user1.png"),
+      require("../assets/icons/user2.png"),
+      require("../assets/icons/user3.png"),
+      require("../assets/icons/user4.png"),
+      require("../assets/icons/user3.png"),
+    ],
+  },
+  {
+    id: 2,
+    date: "20 July",
+    day: "Thu",
+    time: "12:00 pm",
+    title: "Increase Lead Generation",
+    members: [
+      require("../assets/icons/user5.png"),
+      require("../assets/icons/user6.png"),
+      require("../assets/icons/user7.png"),
+      require("../assets/icons/user8.png"),
+      require("../assets/icons/user3.png"),
+    ],
+  },
+  {
+    id: 3,
+    date: "20 July",
+    day: "Thu",
+    time: "12:00 pm",
+    title: "Increase Lead Generation",
+    members: [
+      require("../assets/icons/user1.png"),
+      require("../assets/icons/user2.png"),
+      require("../assets/icons/user3.png"),
+      require("../assets/icons/user3.png"),
+      require("../assets/icons/user4.png"),
+    ],
+  },
+  {
+    id: 4,
+    date: "20 July",
+    day: "Thu",
+    time: "12:00 pm",
+    title: "Increase Lead Generation",
+    members: [
+      require("../assets/icons/user5.png"),
+      require("../assets/icons/user3.png"),
+      require("../assets/icons/user6.png"),
+      require("../assets/icons/user7.png"),
+      require("../assets/icons/user8.png"),
+    ],
+  },
+  {
+    id: 5,
+    date: "20 July",
+    day: "Thu",
+    time: "12:00 pm",
+    title: "Increase Lead Generation",
+    members: [
+      require("../assets/icons/user1.png"),
+      require("../assets/icons/user3.png"),
+      require("../assets/icons/user2.png"),
+      require("../assets/icons/user3.png"),
+      require("../assets/icons/user4.png"),
+    ],
+  },
+  {
+    id: 6,
+    date: "20 July",
+    day: "Thu",
+    time: "12:00 pm",
+    title: "Increase Lead Generation",
+    members: [
+      require("../assets/icons/user5.png"),
+      require("../assets/icons/user6.png"),
+      require("../assets/icons/user7.png"),
+      require("../assets/icons/user3.png"),
+      require("../assets/icons/user8.png"),
+    ],
+  },
+  {
+    id: 7,
+    date: "20 July",
+    day: "Thu",
+    time: "12:00 pm",
+    title: "Increase Lead Generation",
+    members: [
+      require("../assets/icons/user1.png"),
+      require("../assets/icons/user2.png"),
+      require("../assets/icons/user3.png"),
+      require("../assets/icons/user3.png"),
+      require("../assets/icons/user4.png"),
+    ],
+  },
+  {
+    id: 8,
+    date: "20 July",
+    day: "Thu",
+    time: "12:00 pm",
+    title: "Increase Lead Generation",
+    members: [
+      require("../assets/icons/user5.png"),
+      require("../assets/icons/user6.png"),
+      require("../assets/icons/user7.png"),
+      require("../assets/icons/user8.png"),
+      require("../assets/icons/user3.png"),
+    ],
+  },
+  {
+    id: 9,
+    date: "20 July",
+    day: "Thu",
+    time: "12:00 pm",
+    title: "Increase Lead Generation",
+    members: [
+      require("../assets/icons/user1.png"),
+      require("../assets/icons/user2.png"),
+      require("../assets/icons/user3.png"),
+      require("../assets/icons/user3.png"),
+      require("../assets/icons/user4.png"),
+    ],
+  },
+];
+
+export const CalendarData = [
+  {
+    day: "Sunday",
+    cards: [
+      {
+        time: "12:00 pm",
+        title: "Increase Lead Generation",
+        members: [
+          require("../assets/icons/user1.png"),
+          require("../assets/icons/user2.png"),
+          require("../assets/icons/user3.png"),
+          require("../assets/icons/user3.png"),
+          require("../assets/icons/user4.png"),
+        ],
+      },
+      {
+        time: "12:00 pm",
+        title: "Increase Lead Generation",
+        members: [
+          require("../assets/icons/user1.png"),
+          require("../assets/icons/user2.png"),
+          require("../assets/icons/user3.png"),
+          require("../assets/icons/user3.png"),
+          require("../assets/icons/user4.png"),
+        ],
+      },
+      {
+        time: "12:00 pm",
+        title: "Increase Lead Generation",
+        members: [
+          require("../assets/icons/user1.png"),
+          require("../assets/icons/user2.png"),
+          require("../assets/icons/user3.png"),
+          require("../assets/icons/user3.png"),
+          require("../assets/icons/user4.png"),
+        ],
+      },
+    ],
+  },
+  {
+    day: "Monday",
+    cards: [
+      {
+        time: "12:00 pm",
+        title: "Increase Lead Generation",
+        members: [
+          require("../assets/icons/user1.png"),
+          require("../assets/icons/user2.png"),
+          require("../assets/icons/user3.png"),
+          require("../assets/icons/user3.png"),
+          require("../assets/icons/user4.png"),
+        ],
+      },
+      {
+        time: "12:00 pm",
+        title: "Increase Lead Generation",
+        members: [
+          require("../assets/icons/user1.png"),
+          require("../assets/icons/user2.png"),
+          require("../assets/icons/user3.png"),
+          require("../assets/icons/user3.png"),
+          require("../assets/icons/user4.png"),
+        ],
+      },
+      {
+        time: "12:00 pm",
+        title: "Increase Lead Generation",
+        members: [
+          require("../assets/icons/user1.png"),
+          require("../assets/icons/user2.png"),
+          require("../assets/icons/user3.png"),
+          require("../assets/icons/user3.png"),
+          require("../assets/icons/user4.png"),
+        ],
+      },
+      {
+        time: "12:00 pm",
+        title: "Increase Lead Generation",
+        members: [
+          require("../assets/icons/user1.png"),
+          require("../assets/icons/user2.png"),
+          require("../assets/icons/user3.png"),
+          require("../assets/icons/user3.png"),
+          require("../assets/icons/user4.png"),
+        ],
+      },
+      {
+        time: "12:00 pm",
+        title: "Increase Lead Generation",
+        members: [
+          require("../assets/icons/user1.png"),
+          require("../assets/icons/user2.png"),
+          require("../assets/icons/user3.png"),
+          require("../assets/icons/user3.png"),
+          require("../assets/icons/user4.png"),
+        ],
+      },
+    ],
+  },
+  {
+    day: "Tuesday",
+    cards: [
+      {
+        time: "12:00 pm",
+        title: "Increase Lead Generation",
+        members: [
+          require("../assets/icons/user1.png"),
+          require("../assets/icons/user2.png"),
+          require("../assets/icons/user3.png"),
+          require("../assets/icons/user3.png"),
+          require("../assets/icons/user4.png"),
+        ],
+      },
+    ],
+  },
+  {
+    day: "Wednesday",
+    cards: [
+      {
+        time: "12:00 pm",
+        title: "Increase Lead Generation",
+        members: [
+          require("../assets/icons/user1.png"),
+          require("../assets/icons/user2.png"),
+          require("../assets/icons/user3.png"),
+          require("../assets/icons/user3.png"),
+          require("../assets/icons/user4.png"),
+        ],
+      },
+      {
+        time: "12:00 pm",
+        title: "Increase Lead Generation",
+        members: [
+          require("../assets/icons/user1.png"),
+          require("../assets/icons/user2.png"),
+          require("../assets/icons/user3.png"),
+          require("../assets/icons/user3.png"),
+          require("../assets/icons/user4.png"),
+        ],
+      },
+    ],
+  },
+  {
+    day: "Thursday",
+    cards: [
+      {
+        time: "12:00 pm",
+        title: "Increase Lead Generation",
+        members: [
+          require("../assets/icons/user1.png"),
+          require("../assets/icons/user2.png"),
+          require("../assets/icons/user3.png"),
+          require("../assets/icons/user3.png"),
+          require("../assets/icons/user4.png"),
+        ],
+      },
+      {
+        time: "12:00 pm",
+        title: "Increase Lead Generation",
+        members: [
+          require("../assets/icons/user1.png"),
+          require("../assets/icons/user2.png"),
+          require("../assets/icons/user3.png"),
+          require("../assets/icons/user3.png"),
+          require("../assets/icons/user4.png"),
+        ],
+      },
+      {
+        time: "12:00 pm",
+        title: "Increase Lead Generation",
+        members: [
+          require("../assets/icons/user1.png"),
+          require("../assets/icons/user2.png"),
+          require("../assets/icons/user3.png"),
+          require("../assets/icons/user3.png"),
+          require("../assets/icons/user4.png"),
+        ],
+      },
+      {
+        time: "12:00 pm",
+        title: "Increase Lead Generation",
+        members: [
+          require("../assets/icons/user1.png"),
+          require("../assets/icons/user2.png"),
+          require("../assets/icons/user3.png"),
+          require("../assets/icons/user3.png"),
+          require("../assets/icons/user4.png"),
+        ],
+      },
+    ],
+  },
+  {
+    day: "Friday",
+    cards: [
+      {
+        time: "12:00 pm",
+        title: "Increase Lead Generation",
+        members: [
+          require("../assets/icons/user1.png"),
+          require("../assets/icons/user2.png"),
+          require("../assets/icons/user3.png"),
+          require("../assets/icons/user3.png"),
+          require("../assets/icons/user4.png"),
+        ],
+      },
+    ],
+  },
+];
