@@ -6,6 +6,12 @@ import Task from "../components/activity/Task.jsx";
 import Reminder from "../components/activity/Reminder.jsx";
 import BoradView from "../components/activity/BoradView.jsx";
 import CalenderView from "../components/activity/CalenderView.jsx";
+import Automated from "../components/reports/Automated.jsx";
+import Customize from "../components/reports/Customize.jsx";
+import Board from "../components/meeting/Board.jsx";
+import Calender from "../components/meeting/Calender.jsx";
+import Account from "../components/role/Account.jsx";
+import Permission from "../components/role/Permission.jsx";
 
 export const SideBarLinks = [
   {
@@ -38,38 +44,38 @@ export const SideBarLinks = [
     name: "Reports and Analytics",
     icon: require("../assets/images/reports.png"),
     category: "Analytics and Reporting",
-    //path: "/reports",
+    path: "/reports",
   },
   {
     id: 6,
     name: "Prefs and Goals",
     icon: require("../assets/images/goals.png"),
-    //path: "/goals",
+    path: "/goals",
   },
   {
     id: 7,
     name: "E-com Integration",
     icon: require("../assets/images/ecom.png"),
     category: "Integrations and Support Functions",
-    //path: "/e-com",
+    path: "/e-com",
   },
   {
     id: 8,
     name: "Meeting Scheduling",
     icon: require("../assets/images/meeting.png"),
-    //path: "/meeting",
+    path: "/meeting",
   },
   {
     id: 9,
     name: "Role-based Access",
     icon: require("../assets/images/role.png"),
-    //path: "/roles",
+    path: "/roles",
   },
   {
     id: 10,
     name: "Chat",
     icon: require("../assets/images/chat.png"),
-    //path: "/chat",
+    path: "/chat",
   },
 ];
 
@@ -1258,3 +1264,475 @@ export const CalendarData = [
     ],
   },
 ];
+
+export const ReportTabData = [
+  {
+    title: "Automated Report",
+    content: <Automated />,
+  },
+  {
+    title: "Customized Report",
+    content: <Customize />,
+  },
+];
+
+export const AutomatedData = [
+  {
+    name: "Sales Performance Report",
+    description: "Overview of Sales",
+    date: "09/05/2024",
+  },
+  {
+    name: "KPI Report",
+    description: "Detailed metrics of KPIs",
+    date: "09/05/2024",
+  },
+  {
+    name: "Sales Forecast Report",
+    description: "Predictions of future Sales",
+    date: "09/05/2024",
+  },
+];
+
+export const KpiData = [
+  {
+    title: "Sales Revenue",
+    value: "$450,000",
+    target: "$500,000",
+    progress: 90,
+    description:
+      "Revenue for the current quarter is $450,000, aiming for $500,000.",
+    color: "bg-[#FF8E8F]",
+  },
+  {
+    title: "Satisfaction Score",
+    value: "85%",
+    target: "90%",
+    progress: 60,
+    description:
+      "name satisfaction is currently at 85%, slightly below the target.",
+    color: "bg-[#8979FF]",
+  },
+  {
+    title: "Training Comp Rate",
+    value: "85%",
+    target: "90%",
+    progress: 90,
+    description:
+      "90% of the training is completed, with a target of 100% by the end of the quarter.",
+    color: "bg-[#E178C5]",
+  },
+  {
+    title: "Quarterly Revenue",
+    value: "$450,000",
+    target: "$500,000",
+    progress: 30,
+    description:
+      "Revenue for the current quarter is $450,000, aiming for $500,000.",
+    color: "bg-[#FFB38E]",
+  },
+];
+
+export const GoalsData = [
+  {
+    type: "Individual",
+    description: "Increase sales by 20%",
+    name: "John Doe",
+    target: "20%",
+    status: "15%",
+    progress: "75%",
+    deadline: "09/05/2024",
+  },
+  {
+    type: "Team",
+    description: "Increase sales by 20%",
+    name: "John Doe",
+    target: "20%",
+    status: "15%",
+    progress: "75%",
+    deadline: "09/05/2024",
+  },
+  {
+    type: "Individual",
+    description: "Increase sales by 20%",
+    name: "John Doe",
+    target: "20%",
+    status: "15%",
+    progress: "75%",
+    deadline: "09/05/2024",
+  },
+  {
+    type: "Team",
+    description: "Increase sales by 20%",
+    name: "John Doe",
+    target: "20%",
+    status: "15%",
+    progress: "75%",
+    deadline: "09/05/2024",
+  },
+  {
+    type: "Individual",
+    description: "Increase sales by 20%",
+    name: "John Doe",
+    target: "20%",
+    status: "15%",
+    progress: "75%",
+    deadline: "09/05/2024",
+  },
+  {
+    type: "Team",
+    description: "Increase sales by 20%",
+    name: "John Doe",
+    target: "20%",
+    status: "15%",
+    progress: "75%",
+    deadline: "09/05/2024",
+  },
+];
+
+export const EcomData = [
+  {
+    orderId: "675675",
+    date: "09/05/2024",
+    amount: "$560",
+    name: "John Doe",
+    emailSent: "09/05/2024",
+    status: "Paid",
+    bgColor: "bg-[#4BB8171C] px-9",
+  },
+  {
+    orderId: "675675",
+    date: "09/05/2024",
+    amount: "$560",
+    name: "John Doe",
+    emailSent: "09/05/2024",
+    status: "UnPaid",
+    bgColor: "bg-[#CFCFCF26] px-6",
+  },
+  {
+    orderId: "675675",
+    date: "09/05/2024",
+    amount: "$560",
+    name: "John Doe",
+    emailSent: "09/05/2024",
+    status: "Left Card",
+    bgColor: "bg-[#FF4C4C1A] px-4",
+  },
+  {
+    orderId: "675675",
+    date: "09/05/2024",
+    amount: "$560",
+    name: "John Doe",
+    emailSent: "09/05/2024",
+    status: "Arrived",
+    bgColor: "bg-[#8979FF0A] px-6",
+  },
+  {
+    orderId: "675675",
+    date: "09/05/2024",
+    amount: "$560",
+    name: "John Doe",
+    emailSent: "09/05/2024",
+    status: "Paid",
+    bgColor: "bg-[#4BB8171C] px-9",
+  },
+  {
+    orderId: "675675",
+    date: "09/05/2024",
+    amount: "$560",
+    name: "John Doe",
+    emailSent: "09/05/2024",
+    status: "UnPaid",
+    bgColor: "bg-[#CFCFCF26] px-6",
+  },
+  {
+    orderId: "675675",
+    date: "09/05/2024",
+    amount: "$560",
+    name: "John Doe",
+    emailSent: "09/05/2024",
+    status: "Left Card",
+    bgColor: "bg-[#FF4C4C1A] px-4",
+  },
+  {
+    orderId: "675675",
+    date: "09/05/2024",
+    amount: "$560",
+    name: "John Doe",
+    emailSent: "09/05/2024",
+    status: "Arrived",
+    bgColor: "bg-[#8979FF0A] px-6",
+  },
+];
+
+export const MeetingTabData = [
+  {
+    icon: require("../assets/images/board.png"),
+    content: <Board />,
+  },
+  {
+    icon: require("../assets/images/chat.png"),
+    content: <Calender />,
+  },
+];
+
+export const MeetingData = [
+  {
+    icon: require("../assets/icons/zoom.png"),
+    title: "Sales Leads Meeting",
+    time: "10 am to 12 pm",
+    description:
+      "Dorewm ipsum sit amet, cosctor adispinting arli, nuc vhalu libero et bet",
+    members: [
+      require("../assets/icons/user1.png"),
+      require("../assets/icons/user2.png"),
+      require("../assets/icons/user3.png"),
+      require("../assets/icons/user3.png"),
+      require("../assets/icons/user4.png"),
+    ],
+  },
+  {
+    icon: require("../assets/icons/zoom.png"),
+    title: "Sales Leads Meeting",
+    time: "10 am to 12 pm",
+    description:
+      "Dorewm ipsum sit amet, cosctor adispinting arli, nuc vhalu libero et bet",
+    members: [
+      require("../assets/icons/user1.png"),
+      require("../assets/icons/user2.png"),
+      require("../assets/icons/user3.png"),
+      require("../assets/icons/user3.png"),
+      require("../assets/icons/user4.png"),
+    ],
+  },
+  {
+    icon: require("../assets/icons/zoom.png"),
+    title: "Sales Leads Meeting",
+    time: "10 am to 12 pm",
+    description:
+      "Dorewm ipsum sit amet, cosctor adispinting arli, nuc vhalu libero et bet",
+    members: [
+      require("../assets/icons/user1.png"),
+      require("../assets/icons/user2.png"),
+      require("../assets/icons/user3.png"),
+      require("../assets/icons/user3.png"),
+      require("../assets/icons/user4.png"),
+    ],
+  },
+  {
+    icon: require("../assets/icons/zoom.png"),
+    title: "Sales Leads Meeting",
+    time: "10 am to 12 pm",
+    description:
+      "Dorewm ipsum sit amet, cosctor adispinting arli, nuc vhalu libero et bet",
+    members: [
+      require("../assets/icons/user1.png"),
+      require("../assets/icons/user2.png"),
+      require("../assets/icons/user3.png"),
+      require("../assets/icons/user3.png"),
+      require("../assets/icons/user4.png"),
+    ],
+  },
+  {
+    icon: require("../assets/icons/zoom.png"),
+    title: "Sales Leads Meeting",
+    time: "10 am to 12 pm",
+    description:
+      "Dorewm ipsum sit amet, cosctor adispinting arli, nuc vhalu libero et bet",
+    members: [
+      require("../assets/icons/user1.png"),
+      require("../assets/icons/user2.png"),
+      require("../assets/icons/user3.png"),
+      require("../assets/icons/user3.png"),
+      require("../assets/icons/user4.png"),
+    ],
+  },
+  {
+    icon: require("../assets/icons/zoom.png"),
+    title: "Sales Leads Meeting",
+    time: "10 am to 12 pm",
+    description:
+      "Dorewm ipsum sit amet, cosctor adispinting arli, nuc vhalu libero et bet",
+    members: [
+      require("../assets/icons/user1.png"),
+      require("../assets/icons/user2.png"),
+      require("../assets/icons/user3.png"),
+      require("../assets/icons/user3.png"),
+      require("../assets/icons/user4.png"),
+    ],
+  },
+  {
+    icon: require("../assets/icons/zoom.png"),
+    title: "Sales Leads Meeting",
+    time: "10 am to 12 pm",
+    description:
+      "Dorewm ipsum sit amet, cosctor adispinting arli, nuc vhalu libero et bet",
+    members: [
+      require("../assets/icons/user1.png"),
+      require("../assets/icons/user2.png"),
+      require("../assets/icons/user3.png"),
+      require("../assets/icons/user3.png"),
+      require("../assets/icons/user4.png"),
+    ],
+  },
+  {
+    icon: require("../assets/icons/zoom.png"),
+    title: "Sales Leads Meeting",
+    time: "10 am to 12 pm",
+    description:
+      "Dorewm ipsum sit amet, cosctor adispinting arli, nuc vhalu libero et bet",
+    members: [
+      require("../assets/icons/user1.png"),
+      require("../assets/icons/user2.png"),
+      require("../assets/icons/user3.png"),
+      require("../assets/icons/user3.png"),
+      require("../assets/icons/user4.png"),
+    ],
+  },
+];
+
+export const RoleTabData = [
+  {
+    title: "Accounts and Contacts",
+    content: <Account />,
+  },
+  {
+    title: "Roles and Permission",
+    content: <Permission />,
+  },
+];
+
+export const AccountData = [
+  {
+    accountId: "675674",
+    name: "Delta Inc",
+    contactName: "John Doe",
+    number: "+097 55544 3",
+  },
+  {
+    accountId: "675674",
+    name: "Delta Inc",
+    contactName: "John Doe",
+    number: "+097 55544 3",
+  },
+  {
+    accountId: "675674",
+    name: "Delta Inc",
+    contactName: "John Doe",
+    number: "+097 55544 3",
+  },
+  {
+    accountId: "675674",
+    name: "Delta Inc",
+    contactName: "John Doe",
+    number: "+097 55544 3",
+  },
+  {
+    accountId: "675674",
+    name: "Delta Inc",
+    contactName: "John Doe",
+    number: "+097 55544 3",
+  },
+  {
+    accountId: "675674",
+    name: "Delta Inc",
+    contactName: "John Doe",
+    number: "+097 55544 3",
+  },
+  {
+    accountId: "675674",
+    name: "Delta Inc",
+    contactName: "John Doe",
+    number: "+097 55544 3",
+  },
+  {
+    accountId: "675674",
+    name: "Delta Inc",
+    contactName: "John Doe",
+    number: "+097 55544 3",
+  },
+  {
+    accountId: "675674",
+    name: "Delta Inc",
+    contactName: "John Doe",
+    number: "+097 55544 3",
+  },
+];
+
+export const PermissionData = [
+  {
+    role: 'Admin',
+    account: 'Yes',
+    contact: 'Yes',
+    number: 'Yes'
+  },
+  {
+    role: 'Sales',
+    account: 'Own',
+    contact: 'Own',
+    number: 'limited'
+  },
+  {
+    role: 'Pre-Sales',
+    account: 'limited',
+    contact: 'limited',
+    number: 'No'
+  },
+]
+
+export const Groups = [
+  {
+    icon: require('../assets/icons/user1.png'),
+    name: 'Friends Forever',
+    message: 'Hahahaha!',
+    time: 'Today, 9.52pm',
+    number: '4'
+  },
+  {
+    icon: require('../assets/icons/user2.png'),
+    name: 'Mera Gang',
+    message: 'Kyuuuuuu???',
+    time: 'yesterday, 12.22pm',
+  },
+  {
+    icon: require('../assets/icons/user3.png'),
+    name: 'Hiking',
+    message: 'Its not going to happen',
+    time: 'Wed, 9.52pm',
+  },
+]
+
+export const PeopleData = [
+  {
+    icon: require('../assets/icons/user4.png'),
+    name: 'Friends Forever',
+    message: 'Hahahaha!',
+    time: 'Today, 9.52pm',
+    number: '4'
+  },
+  {
+    icon: require('../assets/icons/user5.png'),
+    name: 'Mera Gang',
+    message: 'Kyuuuuuu???',
+    time: 'yesterday, 12.22pm',
+  },
+  {
+    icon: require('../assets/icons/user6.png'),
+    name: 'Hiking',
+    message: 'Its not going to happen',
+    time: 'Wed, 9.52pm',
+  },
+  {
+    icon: require('../assets/icons/user7.png'),
+    name: 'Friends Forever',
+    message: 'Hahahaha!',
+    time: 'Today, 9.52pm',
+    number: '4'
+  },
+  {
+    icon: require('../assets/icons/user8.png'),
+    name: 'Mera Gang',
+    message: 'Kyuuuuuu???',
+    time: 'yesterday, 12.22pm',
+  },
+]

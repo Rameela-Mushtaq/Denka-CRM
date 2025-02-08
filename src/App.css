@@ -17,6 +17,10 @@
     width: 5px; /* Set width of the scrollbar */
     height: 5px; /* For horizontal scrollbar */
   }
+
+ .btn-shadow {
+  box-shadow: 0px 4px 10.8px 0px #00000040;
+ }
   
   
   
