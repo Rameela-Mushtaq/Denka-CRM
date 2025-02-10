@@ -10,7 +10,7 @@ const Tab = () => {
                 <button
                     key={index}
                     onClick={() => setActiveTab(index)}
-                    className={`lg:px-7 px-4 lg:py-3 py-2 rounded-md lg:text-base text-sm font-medium whitespace-nowrap ${activeTab === index
+                    className={`lg:px-7 px-4 lg:py-3 py-2 md:w-fit w-full rounded-md lg:text-base text-sm font-medium whitespace-nowrap ${activeTab === index
                         ? "bg-btnBg text-white"
                         : "bg-transparent "
                         }`}

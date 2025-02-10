@@ -81,7 +81,9 @@ const TopBar = ({ onAddBlogClick }) => {
           onClick={closeMenu}
           className="fixed inset-0 bg-black bg-opacity-40 z-40"
         >
-          <MobileBar />
+          <MobileBar 
+          closeMenu={closeMenu}
+          />
         </div>
       )}
 

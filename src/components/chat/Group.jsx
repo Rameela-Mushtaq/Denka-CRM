@@ -11,7 +11,7 @@ const Group = () => {
                     <img src={item.icon} alt="icon" className='object-contain' />
                     <div className='sm:flex hidden flex-col w-full'>
                         <div className='flex justify-between gap-2 items-center'>
-                            <div className='font-semibold truncate lg:text-lg text-xs'>{item.name}</div>
+                            <div className='font-semibold lg:text-lg text-xs'>{item.name}</div>
                             <div className='font-[300px] lg:flex hidden text-sm text-other'>{item.time}</div>
                         </div>
 

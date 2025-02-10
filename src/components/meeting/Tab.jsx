@@ -20,7 +20,7 @@ const Tab = () => {
                         />
                     </div>
 
-                    <div className='flex gap-6'>
+                    <div className='flex  flex-wrap gap-6'>
                         <button
                             onClick={() => setIsMeetingOpen(true)}
                             className="text-white p-2 md:text-base text-sm bg-btnBg md:p-3 w-fit whitespace-nowrap font-medium rounded-lg ">
@@ -37,7 +37,9 @@ const Tab = () => {
                                     : "bg-transparent "
                                     }`}
                             >
+                                <div className='w-6 h-6'>
                                 <img src={tab.icon} alt="" />
+                                </div>
                             </button>
                         ))}
                         </div>

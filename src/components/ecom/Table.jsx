@@ -21,7 +21,7 @@ const Table = () => {
             Automated system to send follow-up emails to customers who have abandoned their carts.
           </div>
           <div className="text-other font-medium flex gap-2 items-center ">
-            <div className="flex gap-3">
+            <div className="flex flex-wrap md:gap-3 gap-1">
             
               <Filtering />
             </div>
@@ -29,7 +29,7 @@ const Table = () => {
             <input 
               type="text" 
               placeholder='Search Here' 
-              className='outline-none'
+              className='outline-none '
               value={searchTerm} 
               onChange={(e) => setSearchTerm(e.target.value)}
             />
